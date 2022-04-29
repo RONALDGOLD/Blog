@@ -37,26 +37,21 @@
 	<section class="container">
 		<center>
 			<?php $articulos= new wp_query([
-						'showposts' => 3
+						'showposts' => 6
 					]);
-			while($articulos->have_posts()){
-				$articulos->the_post();
+			while($articulos->have_posts()) {
+				$articulos->the_post(); ?>
 
 
-			       the_title();
-				echo'<hr>';
-			} ?>
-			<img src="https://www.binaural.es/wp-content/uploads/2019/09/deftones.jpg">
-			<h3> <a href="Deftonestour.html">DEFTONES TOUR 2022</a></h3>
-			<p> Deftones es una banda estadounidense de metal alternativo formada en Sacramento,<br>California, en el año 	1988. Son considerados los pioneros<br> del género nu metal junto con Korn.</p> 
-			<hr>
-			<img src=https://s.isanook.com/jo/0/rp/r/w728/ya0xa0m1w0/aHR0cHM6Ly9zLmlzYW5vb2suY29tL2pvLzAvdWQvNDgxLzI0MDY1MTcvb29vLmpwZw==.jpg>
-			<h3> <a href="http://www.zoom95.com/linkin-park-tiene-material-inedito-que-fue-grabado-con-chester-bennington/">SALEN NUEVA COLECCION DE ROPA DE LINKIN PARK </a></h3>
-		 	<p> Deftones es una banda estadounidense de metal alternativo formada en Sacramento,<br>California, en el año 1988. Son considerados los pioneros<br> del género nu metal junto con Korn.</p> 
-		 	<hr>
-		 	<img src="https://www.opcionprogreso.com/wp-content/uploads/2021/07/guns_n_roses_band-208212.jpg">
-		 	<h3><a href="https://teleticket.com.pe/guns-n-roses-peru-2022">NUEVO MATERIAL </a></h3>
-		 	<p> Es una de las bandas de rock más exitosas de todos los tiempos,<br>habiendo vendido más de ciento cincuenta millones de discos, es considerada ícono global de la música<br> y forma parte del prestigioso Salón de la Fama del Rock and Roll.</p>
+			<?php the_post_thumbnail('full');	?>
+			<h3> <?php the_title(); ?></h3>
+			<?php the_excerpt(); ?>
+
+
+
+
+
+			<?php } ?>
 
 
 		</center>
