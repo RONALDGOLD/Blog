@@ -8,11 +8,12 @@
 <body>
 	<header>
 		<center>
-		<img src="https://p4.wallpaperbetter.com/wallpaper/580/465/197/band-music-deftones-wallpaper-preview.jpg">
-		    <p>PREPARATE PARA LA LLEGADA MAS ESPERADA DESPUES DE PANDEMIA <br>
-		    	DEFTONES TOUR 2022 , INGRESA Y SEPARA TU ENTRADA,SIGUENOS<br>
-		    	  en Nuestras Redes Sociales.
-			</p>
+	<h2><a href=" <?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+	<h4>resumen: <?php the_field('resumen'); ?>	</h4>
+	<?php the_post_thumbnail("large"); ?>
+		<?php the_content(); ?> 
+		   <h4>fuente: <?php the_field('fuente'); ?></h4>
+			
 		</center>
 	</header>
 
