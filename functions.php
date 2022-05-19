@@ -1,5 +1,12 @@
-<?php add_action('init', 'c7_init');
+<?php 
+add_action('init', 'codigo_inicial');
 
-function c7_init() {
-	add_theme_support('post-thumbnails');
+function codigo_inicial() {
+	
+	register_post_type('empleos', [
+		"label"=> "Empleos",
+		"public"=> true 
+]);
+
 }
+?>

@@ -3,7 +3,8 @@
 	<section class="container">
 		
 			<?php $articulos= new wp_query([
-						'showposts' => 6
+						'showposts' => 6,
+						"post_type"=> "empleos"
 					]);
 			while($articulos->have_posts()) {
 				$articulos->the_post(); ?>
