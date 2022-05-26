@@ -7,6 +7,9 @@ function codigo_inicial() {
 		"label"=> "Empleos",
 		"public"=> true 
 ]);
+	register_nav_menus ([
+        'principal' => 'Zona principal'
+	]);
 
 }
 ?>
